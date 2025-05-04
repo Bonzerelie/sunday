@@ -194,8 +194,6 @@ function generateNoteRangeText() {
       btn.addEventListener('click', handleAnswer);
       noteButtonsContainer.appendChild(btn);
     });
-    if (currentMode === 8 && showDegrees && note === data.noteOrder[0]) {
-  btn.classList.add('wide-label');
 }
   }
 
