@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Relative Pitch Game - All Major Scales</title>
+  <link rel="stylesheet" href="style.css" />
+<script src="script.js" defer></script></head>
+<body>
+  <div class="container">
+    <div id="main-menu">
+      <h1>The Relative Pitch Game 🎹🎶</h1>
+      <h2>Select a Major Scale</h2>
+
+      <h3>Major scale with no sharps or flats</h3>
+      <button class="green-button scale-select" data-scale="C">C Major</button>
+
+      <h3>Major scales with sharps (#)</h3>
+      <button class="green-button scale-select" data-scale="G">G Major</button>
+      <button class="green-button scale-select" data-scale="D">D Major</button>
+      <button class="green-button scale-select" data-scale="A">A Major</button>
+      <button class="green-button scale-select" data-scale="E">E Major</button>
+
+      <h3>Major scales with flats (b)</h3>
+      <button class="green-button scale-select" data-scale="F">F Major</button>
+      <button class="green-button scale-select" data-scale="Bb">Bb Major</button>
+      <button class="green-button scale-select" data-scale="Eb">Eb Major</button>
+      <button class="green-button scale-select" data-scale="Ab">Ab Major</button>
+
+      <h3>Enharmonic Major Scales</h3>
+      <button class="green-button scale-select" data-scale="B">B Major (Cb Major)</button>
+      <button class="green-button scale-select" data-scale="F#">F# Major (Gb Major)</button>
+      <button class="green-button scale-select" data-scale="C#">C# Major (Db Major)</button>
+      <p>Note: enharmonic scales have notes that share the same pitch,
+      however these shared pitches could be written with either sharps or flats.
+      e.g. in F# Major the second note is 'G#', in Gb major the second note
+is 'Ab' - both G# and Ab are the same pitch, we are just labelling them differently.</p>
+    </div>
+
+    <div id="mode-select-screen" class="hidden">
+  <div class="start-content">
+    <h1 class="game-title">The Relative Pitch Game 🎹🎶</h1>
+    <h2 id="selected-scale-label"></h2>
+    <p>How many notes should be included? (This can be changed in game!)</p>
+    <button class="green-button mode-button" data-mode="2">First 2 notes</button>
+    <button class="green-button mode-button" data-mode="3">First 3 notes</button>
+    <button class="green-button mode-button" data-mode="4">First 4 notes</button>
+    <button class="green-button mode-button" data-mode="5">First 5 notes</button>
+    <button class="green-button mode-button" data-mode="6">First 6 notes</button>
+    <button class="green-button mode-button" data-mode="7">First 7 notes</button>
+    <button class="green-button mode-button" data-mode="8">Entire Octave</button>
+    <button class="green-button back-button" id="back-to-scale-select">← Back</button>
+  </div>
+</div>
+
+    <div id="game-screen" class="hidden">
+      <h1 class="game-title">The Relative Pitch Game 🎹🎶</h1>
+      <h2 id="scale-label"></h2>
+      <p id="octave-label"></p>
+
+      <div class="controls">
+        <button id="play-reference" class="green-button">Play Reference</button>
+        <button id="play-scale" class="green-button">Play Scale</button>
+        <button id="replay-note" class="green-button">Replay Note</button>
+        <button id="next-button" class="green-button" disabled>Next</button>
+      </div>
+
+      <p id="prompt">Which note was played?</p>
+
+      <div id="note-buttons-container"></div>
+
+      <div class="toggle-display">
+        <p>Display answers as:</p>
+        <button id="display-notes" class="toggle-button selected">Notes</button>
+        <button id="display-degrees" class="toggle-button">Scale Degrees</button>
+      </div>
+
+      <div class="bottom-buttons">
+        <div class="mode-adjust-buttons">
+          <p>Adjust note range:</p>
+          <div class="adjust-buttons-row">
+            <button id="remove-note" class="green-button">➖</button>
+            <button id="add-note" class="green-button">➕</button>
+          </div>
+        </div>
+        <button id="back-button" class="green-button back-button">← Back</button>
+        <div class="scoreboard">
+        <h3>Score:</h3>
+        <p>Correct: <span id="correct-count">0</span></p>
+        <p>Incorrect: <span id="incorrect-count">0</span></p>
+        <p>Total: <span id="total-count">0</span></p>
+        <p>Accuracy: <span id="accuracy">0.0%</span></p>
+      </div>
+        <button id="reset-score" class="green-button">Reset Score</button>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
