@@ -195,7 +195,6 @@ function generateNoteRangeText() {
       noteButtonsContainer.appendChild(btn);
     });
 }
-  }
 
   function loadNewNote() {
     isAnswered = false;
